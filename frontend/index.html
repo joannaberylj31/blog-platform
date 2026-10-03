@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>PinkBlog 💗</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+
+    <nav>
+
+        <div class="logo">
+            PinkBlog 💗
+        </div>
+
+        <div class="nav-buttons">
+
+            <button onclick="showSection('home')">
+                Home
+            </button>
+
+            <button
+                id="loginBtn"
+                onclick="showSection('login')">
+                Login
+            </button>
+
+            <button
+                id="registerBtn"
+                onclick="showSection('register')">
+                Register
+            </button>
+
+            <button
+                id="createBtn"
+                onclick="showSection('createPost')">
+                Create Post
+            </button>
+
+            <button
+                id="logoutBtn"
+                onclick="logout()">
+                Logout
+            </button>
+
+        </div>
+
+    </nav>
+
+
+    <!-- HOME -->
+
+    <section id="home" class="section active">
+
+        <div class="hero">
+
+            <h1>Welcome to PinkBlog 💗</h1>
+
+            <p>
+                Share your thoughts. Read amazing posts.
+                Connect with others.
+            </p>
+
+        </div>
+
+        <div id="posts"></div>
+
+    </section>
+
+
+    <!-- REGISTER -->
+
+    <section id="register" class="section">
+
+        <div class="form-box">
+
+            <h1>Create Account 💗</h1>
+
+            <input
+                type="text"
+                id="registerName"
+                placeholder="Username">
+
+            <input
+                type="email"
+                id="registerEmail"
+                placeholder="Email">
+
+            <input
+                type="password"
+                id="registerPassword"
+                placeholder="Password">
+
+            <button onclick="register()">
+                Register 💗
+            </button>
+
+            <p>
+                Already have an account?
+
+                <span
+                    class="link"
+                    onclick="showSection('login')">
+                    Login
+                </span>
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- LOGIN -->
+
+    <section id="login" class="section">
+
+        <div class="form-box">
+
+            <h1>Welcome Back 💗</h1>
+
+            <input
+                type="email"
+                id="loginEmail"
+                placeholder="Email">
+
+            <input
+                type="password"
+                id="loginPassword"
+                placeholder="Password">
+
+            <button onclick="login()">
+                Login 💗
+            </button>
+
+            <p>
+                Don't have an account?
+
+                <span
+                    class="link"
+                    onclick="showSection('register')">
+                    Register
+                </span>
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- CREATE POST -->
+
+    <section id="createPost" class="section">
+
+        <div class="form-box">
+
+            <h1>Create New Post ✍️</h1>
+
+            <input
+                type="text"
+                id="postTitle"
+                placeholder="Post Title">
+
+            <textarea
+                id="postContent"
+                placeholder="Write your post here...">
+            </textarea>
+
+            <button onclick="createPost()">
+                Publish Post 💗
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- SINGLE POST -->
+
+    <section id="singlePost" class="section">
+
+    </section>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script src="./script.js"></script>
+
+</body>
+</html>
